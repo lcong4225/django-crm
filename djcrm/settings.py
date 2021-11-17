@@ -13,7 +13,7 @@ from urllib.parse import urlparse
 from django.core.management.utils import get_random_secret_key
 import os
 import sys
-import dj_database_url
+# import dj_database_url
 
 
 
@@ -53,6 +53,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+# ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -65,6 +66,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'sslserver',
 
     # Local apps
     'leads',
@@ -112,16 +114,11 @@ WSGI_APPLICATION = 'djcrm.wsgi.application'
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': "crm",
-#         'USER': "postgres",
-#         'PASSWORD': "Syncforest",
-#         'HOST': "localhost", #127.0.0.1
-# 		'PORT': "5432",
-#         "OPTIONS": {"sslmode": "require"},
-
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
 # r = urlparse(os.environ.get('DATABASE_URL'))
 # DATABASES = {
 #     'default': {
@@ -181,9 +178,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -212,6 +209,12 @@ LOGIN_URL = "/login"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
 
+#local development
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = False
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
@@ -227,12 +230,13 @@ if not DEBUG:
     ALLOWED_HOSTS = ["*"]
 
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-    EMAIL_HOST = "smtp.gmail.org"
+    EMAIL_HOST = "smtp.gmail.com"
     EMAIL_HOST_USER = "travellife6334@gmail.com"
     EMAIL_HOST_PASSWORD = ""
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
     DEFAULT_FROM_EMAIL = 'no-reply <clcrm@gmail.com>'
+
 
 
 

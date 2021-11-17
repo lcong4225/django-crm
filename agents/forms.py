@@ -10,6 +10,6 @@ class AgentModelForm(forms.ModelForm):
         fields = (
             "email",
             "username",
-            "first_name",
             "last_name",
+            "first_name",
         )

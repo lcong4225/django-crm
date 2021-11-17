@@ -22,7 +22,7 @@
                 rounded
             "
             alt="hero"
-            src="https://dummyimage.com/720x600"
+            src="../static/images/coding-logo.gif"
         />
         <div class="text-center lg:w-2/3 w-full">
             <h1
@@ -35,45 +35,30 @@
                     text-gray-900
                 "
             >
-                CRM built with Django
+                CRM
             </h1>
             <p class="mb-8 leading-relaxed">
-                This is CRM helps you manage your leads.
+                これはあなたの顧客を管理システムです。
             </p>
             <div class="flex justify-center">
-                <button
-                    class="
-                        inline-flex
-                        text-white
-                        bg-indigo-500
-                        border-0
-                        py-2
-                        px-6
-                        focus:outline-none
-                        hover:bg-indigo-600
-                        rounded
-                        text-lg
-                    "
-                >
-                    Button
-                </button>
-                <button
-                    class="
-                        ml-4
-                        inline-flex
-                        text-gray-700
-                        bg-gray-100
-                        border-0
-                        py-2
-                        px-6
-                        focus:outline-none
-                        hover:bg-gray-200
-                        rounded
-                        text-lg
-                    "
-                >
-                    Button
-                </button>
+                <a href="{% url 'login' %}">
+                    <button
+                        class="
+                            inline-flex
+                            text-white
+                            bg-indigo-500
+                            border-0
+                            py-2
+                            px-6
+                            focus:outline-none
+                            hover:bg-indigo-600
+                            rounded
+                            text-lg
+                        "
+                    >
+                        始めましょう
+                    </button>
+                </a>
             </div>
         </div>
     </div>

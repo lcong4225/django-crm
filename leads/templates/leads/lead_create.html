@@ -2,10 +2,10 @@
 
 <div class="max-w-lg mx-auto">
     <a class="hover:text-blue-500" href="{% url 'leads:lead-list' %}"
-        >Go back to lists</a
+        >顧客リストに戻る</a
     >
     <div class="py-5 border-t border-gray-200">
-        <h1 class="text-4xl text-gray-800">Create a new lead</h1>
+        <h1 class="text-4xl text-gray-800">顧客作成</h1>
     </div>
     <form method="post" class="mt-5">
         {% csrf_token %} {{ form|crispy }}
@@ -21,7 +21,7 @@
                 rounded-md
             "
         >
-            Submit
+            作成
         </button>
     </form>
 </div>

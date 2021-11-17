@@ -1,10 +1,11 @@
 {% extends "base.html" %} {% load tailwind_filters %} {% block content %}
+
 <section class="text-gray-600 body-font overflow-hidden">
     <div class="container px-5 py-24 mx-auto">
         <div class="lg:w-4/5 mx-auto flex flex-wrap">
             <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
                 <h2 class="text-sm title-font text-gray-500 tracking-widest">
-                    LEAD
+                    顧客
                 </h2>
                 <h1 class="text-gray-900 text-3xl title-font font-medium mb-4">
                     {{lead.first_name}} {{lead.last_name}}
@@ -19,7 +20,7 @@
                             text-lg
                             px-1
                         "
-                        >Overview</a
+                        >概要</a
                     >
                     <a
                         href="{% url 'leads:lead-category-update' lead.pk %}"
@@ -31,7 +32,7 @@
                             text-lg
                             px-1
                         "
-                        >Category</a
+                        >カテゴリー</a
                     >
                     <a
                         href="{% url 'leads:lead-update' lead.pk %}"
@@ -42,7 +43,7 @@
                             text-lg
                             px-1
                         "
-                        >Update Details</a
+                        >編集</a
                     >
                 </div>
                 <form method="post" action="">
@@ -59,22 +60,10 @@
                             rounded-md
                         "
                     >
-                        Submit
+                        移動
                     </button>
                 </form>
             </div>
-            <img
-                alt="ecommerce"
-                class="
-                    lg:w-1/2
-                    w-full
-                    lg:h-auto
-                    h-64
-                    object-cover object-center
-                    rounded
-                "
-                src="https://dummyimage.com/400x400"
-            />
         </div>
     </div>
 </section>

@@ -3,10 +3,10 @@
 <div class="max-w-lg mx-auto">
     <div class="py-5 border-b border-gray-200">
         <a class="hover:text-blue-500 mt-3" href="{% url 'agents:agent-list' %}"
-            >Go back to agents</a
+            >エージェントに戻る</a
         >
     </div>
-    <h1 class="text-4xl text-gray-800">Create a new agents</h1>
+    <h1 class="text-4xl text-gray-800">エージェント作成</h1>
     <form method="post" class="mt-5">
         {% csrf_token %} {{form|crispy}}
         <button
@@ -21,7 +21,7 @@
                 rounded-md
             "
         >
-            Submit
+            作成
         </button>
     </form>
 </div>
