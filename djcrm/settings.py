@@ -35,8 +35,8 @@ import dj_database_url
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
 
-# SECRET_KEY = 'django-insecure-jc+t*$co07zol87_pt2=w3aa^2-7qge#b6k1tm#!e#e=4149l6'
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
+SECRET_KEY = 'django-insecure-jc+t*$co07zol87_pt2=w3aa^2-7qge#b6k1tm#!e#e=4149l6'
+# SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
 # Raises Django's ImproperlyConfigured
 # exception if SECRET_KEY not in os.environ
@@ -232,7 +232,7 @@ if not DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
     EMAIL_HOST = "smtp.gmail.com"
     EMAIL_HOST_USER = "travellife6334@gmail.com"
-    EMAIL_HOST_PASSWORD = ""
+    EMAIL_HOST_PASSWORD = "123456"
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
     DEFAULT_FROM_EMAIL = 'no-reply <clcrm@gmail.com>'
