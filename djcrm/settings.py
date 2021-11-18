@@ -217,6 +217,14 @@ CRISPY_TEMPLATE_PACK = "tailwind"
 # SESSION_COOKIE_SECURE = True
 # CSRF_COOKIE_SECURE = True
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "travellife6334@gmail.com"
+EMAIL_HOST_PASSWORD = "aajhlxtqdezqugax"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = 'no-reply <clcrm@gmail.com>'
+
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
@@ -231,13 +239,7 @@ if not DEBUG:
 
     ALLOWED_HOSTS = ["*"]
 
-    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-    EMAIL_HOST = "smtp.gmail.com"
-    EMAIL_HOST_USER = "travellife6334@gmail.com"
-    EMAIL_HOST_PASSWORD = "Syncforest"
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
-    DEFAULT_FROM_EMAIL = 'no-reply <clcrm@gmail.com>'
+
 
 
 
